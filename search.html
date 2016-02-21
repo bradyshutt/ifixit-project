@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Lato Google Font-->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Search</title>
+
+  </head>
+  <body>
+
+
+    <nav>
+      <div class="nav_logo_wrapper">
+        <a href="index.html"> <img class="nav_logo" src="static/ifixit_logo_white.gif" alt="iFixit"></a> 
+      </div>
+
+      <ul class="nav_items">
+        <a href="#"><li >My Devices</li></a>
+        <a href="search.html"><li id="nav_current">Search</li></a>
+        <a href="index.html"><li>About</li></a>
+      </ul>
+    </nav>
+
+    <div class="content_wrapper">
+      <div class="content">
+
+        <h1>Search for a Device</h1>
+        <form action="" method="post">
+          <input type="text" name="" id="search_query" value="iphone">
+
+          <button id="bbtn">Submit</button>
+        </form>
+
+
+        <div id="search_results">
+          <ul id="results_list">
+
+          </ul>
+
+          <p id="demo">test</p>
+
+        </div>
+
+        <script>
+$(document).ready(function() {
+  $("#bbtn").click(function(){
+    query = document.getElementById("search_query").val();
+  $("#demo").innerText = "hi";
+    $.ajax({ url: "https://www.ifixit.com/api/2.0/search/" + query
+    }).done(function(response) {
+      $.each(response, function(i,item){
+        $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
+      });
+    });   
+  });
+
+
+
+
+  function search_function() {
+    query = document.getElementById("search_query").val();
+    $.ajax({
+      url: "https://www.ifixit.com/api/2.0/search/" + query
+    }).done(function(response) {
+      $.each(response, function(i,item){
+        $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
+      });
+    }); 
+  };
+});
+
+
+
+
+        </script>
+
+        <script>
+
+(function() {
+  $.ajax({
+    url: "https://www.ifixit.com/api/2.0/categories/all"
+  }).done(function(response) {
+    $.each(response, function(i,cat){
+      $("<li class='categories_list_item'>" + cat + "</li>").appendTo("#categories_list");
+    });
+  });
+
+})();
+
+
+
+
+        </script>
+
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
+
+
