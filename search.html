@@ -39,11 +39,11 @@
       <div class="content">
 
         <h1>Search for a Device</h1>
-        <form action="" method="post">
-          <input type="text" name="" id="search_query" value="iphone">
 
-          <button id="bbtn">Submit</button>
-        </form>
+          <input type="text" name="" id="search_query_input" value="iphone">
+          <button id="submit_button" onclick="search_function()">Submit</button>
+          <!--<button id="submit_button" onclick="test_f()">Submit</button>
+          -->
 
 
         <div id="search_results">
@@ -55,9 +55,8 @@
 
         </div>
 
+<!--
         <script>
-$(document).ready(function() {
-  $("#bbtn").click(function(){
     query = document.getElementById("search_query").val();
   $("#demo").innerText = "hi";
     $.ajax({ url: "https://www.ifixit.com/api/2.0/search/" + query
@@ -67,12 +66,26 @@ $(document).ready(function() {
       });
     });   
   });
+-->
 
 
 
+<script>
+  test_f() {
 
+    $("#demo").append("<p>test3</p>");
+
+  }
+  
+</script>
+
+
+
+  <script>
+    
   function search_function() {
     query = document.getElementById("search_query").val();
+    $("#demo").append("<p>test2</p>");
     $.ajax({
       url: "https://www.ifixit.com/api/2.0/search/" + query
     }).done(function(response) {
@@ -84,9 +97,9 @@ $(document).ready(function() {
 });
 
 
+  </script>
 
 
-        </script>
 
         <script>
 
