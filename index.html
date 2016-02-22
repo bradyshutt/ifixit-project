@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-7">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Lato Google Font-->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    <title> iFixit </title>
+
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav_logo_wrapper">
+        <a href="index.html"> <img class="nav_logo" src="static/ifixit_logo_white.gif" alt="iFixit"></a> 
+      </div>
+
+      <ul class="nav_items">
+        <a href="#"><li >My Devices</li></a>
+        <a href="search.html"><li>Search</li></a>
+        <a href="index.html"><li id="nav_current">About</li></a>
+      </ul>
+    </nav>
+
+    <div class="content_wrapper">
+      <div class="content">
+
+
+        <h1 class="page_heading">Welcome to Brady Shutt's iFixit Project!</h1>
+
+
+        <h2 class="sub_heading">Task</h2>
+        <p> Build a tool to let users assemble a collection of devices they own. The collection should be persisted across page reloads (bonus for persistence across browser restarts).  </p>
+        <p> 1. Using our API (https://www.ifixit.com/api/2.0/doc/), make an interface that is intuitive for the user to find the devices they own and associate those devices with their account (which for this project is just their current browser session). The user should be able to both add and remove devices from their “Grab Bag”. Reference the links below for more information.  </p>
+
+        <p>2. Store the list of chosen devices locally and save the state using only client-side methods.</p>
+
+        <h3>Bonus (not required)</h3>
+        <p>1. Graceful user-experience degradation when the internet connection is cut and the user tries to perform actions.</p>
+
+        <p>2. Use (and add to) our JS API library (it’s super-minimal at the moment)</p>
+
+        <p>3. Fullscreen support</p>
+
+        <h3>Some helpful links:</h3>
+        <p>
+        <a href="https://www.ifixit.com/api/2.0/doc">https://www.ifixit.com/api/2.0/doc</a><br>
+        <a href="https://www.ifixit.com/api/2.0/doc/Wikis#list-wikis">https://www.ifixit.com/api/2.0/doc/Wikis#list-wikis</a><br>
+        <a href="https://www.ifixit.com/api/2.0/doc/Suggest">https://www.ifixit.com/api/2.0/doc/Suggest</a><br>
+        <a href="http://www.html5rocks.com/en/tutorials/offline/storage/">http://www.html5rocks.com/en/tutorials/offline/storage/</a>
+        
+        </p>       
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>
+
+
