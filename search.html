@@ -40,10 +40,44 @@
 
         <h1>Search for a Device</h1>
 
-          <input type="text" name="" id="search_query_input" value="iphone">
-          <button id="submit_button" onclick="test_f()">Submit</button>
-          <!--<button id="submit_button" onclick="test_f()">Submit</button>
-          -->
+        <input type="text" name="" id="search_query_input" value="iphone">
+        <button id="submit_button" onclick="searchFunction()">Submit</button>
+
+<script>
+
+function searchFunction() {
+  query = $("#search_query_input").val();
+
+  $.ajax({
+    url: "https://www.ifixit.com/api/2.0/search/" + query
+  }).done(function(response) {
+    $(".inner").empty();
+    $.each(response["results"], function(k, v){
+      $("<li class='query_result_list_item'>" + v["title"] + "</li>").appendTo(".inner");
+    });
+  }); 
+}
+</script>
+<!--
+};
+});
+
+
+  alert(query);
+    alert(response["results"][0]["dataType"]);
+
+</script>
+
+-->
+
+
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+function myFunction() {
+  alert("Hello\nHow are you?");
+}
+        </script>
 
 
         <div id="search_results">
@@ -51,57 +85,26 @@
 
           </ul>
 
-          <p id="demo">test</p>
+          <p class="inner">test</p>
 
         </div>
 
-<!--
-        <script>
-    query = document.getElementById("search_query").val();
-  $("#demo").innerText = "hi";
-    $.ajax({ url: "https://www.ifixit.com/api/2.0/search/" + query
-    }).done(function(response) {
-      $.each(response, function(i,item){
-        $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
-      });
-    });   
+        <!--
+          <script>
+query = document.getElementById("search_query").val();
+$("#demo").innerText = "hi";
+$.ajax({ url: "https://www.ifixit.com/api/2.0/search/" + query
+}).done(function(response) {
+  $.each(response, function(i,item){
+    $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
   });
+});   
+});
 -->
 
 
 
 <script>
-  test_f() {
-
-    $("#demo").append("<p>test3</p>");
-
-  }
-  
-</script>
-
-
-
-  <script>
-    
-  function search_function() {
-    query = document.getElementById("search_query").val();
-    $("#demo").append("<p>test2</p>");
-    $.ajax({
-      url: "https://www.ifixit.com/api/2.0/search/" + query
-    }).done(function(response) {
-      $.each(response, function(i,item){
-        $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
-      });
-    }); 
-  };
-});
-
-
-  </script>
-
-
-
-        <script>
 
 (function() {
   $.ajax({
@@ -117,7 +120,7 @@
 
 
 
-        </script>
+</script>
 
 
       </div>
