@@ -12,7 +12,6 @@
     <!-- Lato Google Font-->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-
     <title>Search</title>
 
   </head>
@@ -56,10 +55,18 @@ function searchFunction() {
   query = $("#search_query_input").val();
 
 
+=======
+<script>
+
+function searchFunction() {
+  query = $("#search_query_input").val();
+
+>>>>>>> master
   $.ajax({
     url: "https://www.ifixit.com/api/2.0/search/" + query
   }).done(function(response) {
     $(".inner").empty();
+<<<<<<< HEAD
     alert(response["results"]);
 
     $.each(response["results"], function(k, v){
