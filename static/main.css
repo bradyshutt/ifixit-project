@@ -7,10 +7,12 @@
   font-size: 20px;
 }
 
-a, a:hover, a:visited, a:active {
+a, a:hover, a:visited, a:active, a:link{
   color: black;
   text-decoration: none;
 }
+
+
 
 nav {
   background-color: black;
@@ -50,8 +52,8 @@ nav ul li:active {
   background-color: #999;
 }
 
-#nav_current {
-  background-color: #333;
+.nav_current {
+  background-color: #f47e20;
 }
 
 .content_wrapper {
@@ -72,7 +74,40 @@ nav ul li:active {
 
 }
 
+.device {
+  margin-bottom: 20px;
+  display: block;
+  height: 180px;
 
+}
+
+.device .title {
+  float: left;
+  color: #444;
+  padding: 65px 35px 0 0 ;
+  font-size: 26px;
+  max-width: 300px;
+  display: inline-block;
+
+}
+
+.device img {
+  height: 150px;
+  float: left;
+}
+
+.device .remove {
+  padding: 65px 0 0 35px;
+  float: left;
+  color: red;
+  font-size: 18px;
+} 
+
+.device .remove:hover {
+  text-decoration: underline;
+  display: block;
+
+}
 
 
 
