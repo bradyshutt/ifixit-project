@@ -18,154 +18,33 @@
   <body>
 
     <div class="nav_wrapper"> </div>
-
     <div class="content_wrapper">
       <div class="content">
-
         <h1>Search for a Device</h1>
-
         <input type="text" name="" id="search_query_input" value="iphone">
-        <button id="submit_button" onclick="searchFunction()">Submit</button>
+        <button id="submit_button" onclick="searchAll()">Submit</button>
+        <button id="clear_button" onclick="clearResults()">Clear</button>
 
+        <div id="search_results_container">
+          <ul id="results_list"> </ul>
+        </div>
 
-        <script>
-function searchFunction() {
-  alert("hello!");
-
-  $.ajax({
-    url: "https://www.ifixit.com/api/0.1/devices/"
-  }).done(function(result) {
-    $(".inner").empty();
-    alert("test");
-
-  });
-}
-  
-  
-
-
-
-        </script>
-
-
-
-        <!--
-          <script>
-function searchFunction() {
-  query = $("#search_query_input").val();
-
-
-=======
-<script>
-
-function searchFunction() {
-  query = $("#search_query_input").val();
-
->>>>>>> master
-  $.ajax({
-    url: "https://www.ifixit.com/api/2.0/search/" + query
-  }).done(function(response) {
-    $(".inner").empty();
-<<<<<<< HEAD
-    alert(response["results"]);
-
-    $.each(response["results"], function(k, v){
-      alert(v);
-    });
-  }); 
-}
-
-          </script>
-
-
-          --> 
-
-          <!-- 
-            alert(response);
-            $("<li class='query_result_list_item'>" + v["title"] + "</li>").appendTo(".inner");
-
-
-
-
-            };
-            });
-
-
-            alert(query);
-            alert(response["results"][0]["dataType"]);
-
-            </script>
-            -->
-
-
-
-            <button onclick="myFunction()">Try it</button>
-
-            <script>
-function myFunction() {
-  alert("Hello\nHow are you?");
-}
-            </script>
-
-
-            <div id="search_results">
-              <ul id="results_list">
-
-              </ul>
-
-              <p class="inner">test</p>
-
-            </div>
-
-            <!--
-              <script>
-query = document.getElementById("search_query").val();
-$("#demo").innerText = "hi";
-$.ajax({ url: "https://www.ifixit.com/api/2.0/search/" + query
-}).done(function(response) {
-  $.each(response, function(i,item){
-    $("<li class='query_result_list_item'>" + cat + "</li>").appendTo("#results_list");
-  });
-});   
-});
--->
-
-
-
-<script>
-
-(function() {
-  $.ajax({
-    url: "https://www.ifixit.com/api/2.0/categories/all"
-  }).done(function(response) {
-    $.each(response, function(i,cat){
-      $("<li class='categories_list_item'>" + cat + "</li>").appendTo("#categories_list");
-    });
-  });
-
-})();
-
-
-
-
-</script>
-
-
-      </div>
-
+        <h1>All Devices</h1>
+        <div class="all_devices">
+          <ul id="all_devices_ul">
+            
+          </ul>
+        </div>
     </div>
-
-
-
   </body>
-    <!-- BOOTSTRAP JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- BOOTSTRAP JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    <!-- JQUERY -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <!-- JQUERY -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
-    <!-- External JavaScript -->
-    <script type="text/javascript" src="static/main.js"></script>
+  <!-- External JavaScript -->
+  <script type="text/javascript" src="static/main.js"></script>
 
 </html>
 

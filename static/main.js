@@ -12,18 +12,23 @@ $(document).ready(function() {
 });
 
 function searchAll() {
-  alert("Starting search...");
-//  $.ajax({
-//   url: "https://www.ifixit.com/api/0.1/devices/"
-//  }).done(function(result) {
-//    $(".inner").empty();
-//   alert("test");
-// 
-//  });
+  $.ajax({
+    url: "https://www.ifixit.com/api/2.0/search/iphone"
+  }).done(function(result) {
+    $("#results_list").empty();
+    $(result["results"]).each(function(k,v) {
+      $("#results_list").append("<li>" + v["title"] + "</li>");
+    });
+  });
+}
+
+function clearResults() {
+  $("#results_list").empty();
 }
 
 function getSavedDevices() {
-  alert("Loading Devices");
+
+
 }
 
 function saveDevice() {
@@ -31,7 +36,8 @@ function saveDevice() {
 }
 
 function getSavedDevices() {
-  alert("Loading the saved devices");
+
+
 }
 
 
