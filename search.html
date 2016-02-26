@@ -21,27 +21,42 @@
     <div class="content_wrapper">
       <div class="content">
         <h1>Search for a Device</h1>
-        <input type="text" name="" id="search_query_input" value="iphone">
-        <button id="submit_button" onclick="searchAll()">Submit</button>
-        <button id="clear_button" onclick="clearResults()">Clear</button>
+        <input type="text" id="searchQueryInput" value="iphone">
+        <button id="submit_button" onclick="searchAll()"> &nbsp; &nbsp;  Submit &nbsp; &nbsp; </button>
+        <button id="clear_button" onclick="clearResults()"> &nbsp; &nbsp; Clear &nbsp; &nbsp; </button>
 
         <div id="search_results_container">
           <ul id="results_list"> </ul>
         </div>
 
-        <h1>All Devices</h1>
+        <h1>Test Device</h1>
         <div class="all_devices">
-          <ul id="all_devices_ul">
-            
-          </ul>
+          <button id="testDeviceButton" onclick="generateTestDevice()"> &nbsp; &nbsp; Generate a Test Device &nbsp;&nbsp;</button>
+          <div id="testDeviceWrapper"></div>
+          <table id="testDevTbl"> </table>
         </div>
-    </div>
+
+        <h1>Categories</h1>
+        <button id="listCategoriesBtn" onclick="listCategories()"> &nbsp; &nbsp; Show Categories &nbsp;&nbsp;</button>
+        <div class="categories" id="listCategories">
+          <ul>
+
+          </ul>
+
+        </div>
+      </div>
   </body>
   <!-- BOOTSTRAP JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <!-- JQUERY -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+  <!-- JQUERY Cookie Plugin -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+  <!-- JQUERY JSON Plugin-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.5.1/jquery.json.min.js"></script>
 
   <!-- External JavaScript -->
   <script type="text/javascript" src="static/main.js"></script>
