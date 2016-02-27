@@ -115,6 +115,19 @@ nav ul li:active {
 
 }
 
+.categoriesWrapper {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.categories {
+  float: left;
+  display: block;
+  padding: 20px 40px;
+  display: inline-block;
+}
+
+
 
 
 
