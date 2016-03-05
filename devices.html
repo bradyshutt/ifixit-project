@@ -28,18 +28,23 @@
 
         <div class="devices_wrapper">
 
-          <div class="device">
+          <button id="load_button" onclick="getSavedDevices()"> &nbsp; &nbsp; Load Saved &nbsp; &nbsp; </button>
+          <div class="loadedDevices"> </div>
+
+
+          <!--
+            <div class="device">
             <a class="title" href="">Samsung Galaxy SIII, Platinum Edition</a>
             <img src="https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg" alt="catz">
             <a class="remove" id="removeDevice" href="#" onclick="removeDevice()">Remove Device</a>
-          </div>
+            </div>
 
-          <div class="device">
+            <div class="device">
             <a class="title" href="">Samsung Galaxy SIII, Platinum Edition</a>
             <img src="https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg" alt="catz">
             <a class="remove" id="removeDevice" href="#" onclick="removeDevice()">Remove Device</a>
-          </div>
-
+            </div>
+          -->
           <script>
 function removeDevice(){
   confirm("Are you sure you want to remove this item from your device list?");

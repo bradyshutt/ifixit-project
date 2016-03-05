@@ -24,6 +24,10 @@
         <input type="text" id="searchQueryInput" value="iphone">
         <button id="submit_button" onclick="searchAll()"> &nbsp; &nbsp;  Submit &nbsp; &nbsp; </button>
         <button id="clear_button" onclick="clearResults()"> &nbsp; &nbsp; Clear &nbsp; &nbsp; </button>
+        <button id="load_button" onclick="getSavedDevices()"> &nbsp; &nbsp; Load Saved &nbsp; &nbsp; </button>
+        <div class="resultsTest">
+
+        </div>
 
         <div id="search_results_container">
           <ul id="results_list"> </ul>
@@ -36,30 +40,35 @@
           <table id="testDevTbl"> </table>
         </div>
 
-        <h1>Categories</h1>
-        <button id="listCategoriesBtn" onclick="listCategories()"> &nbsp; &nbsp; Show Categories &nbsp;&nbsp;</button>
-        <div class="categoriesWrapper">
+
+
+
+        <!--
+          <h1>Categories</h1>
+          <button id="listCategoriesBtn" onclick="listCategories()"> &nbsp; &nbsp; Show Categories &nbsp;&nbsp;</button>
+          <div class="categoriesWrapper">
           <ul class="categories" id="listCategories">
           </ul>
           <ul class="categories" id="listSubCategories">
           </ul>
-      </div>
-  </body>
-  <!-- BOOTSTRAP JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+          </div>
 
+        -->
+
+
+
+
+  </body>
   <!-- JQUERY -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-
   <!-- JQUERY Cookie Plugin -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-
   <!-- JQUERY JSON Plugin-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.5.1/jquery.json.min.js"></script>
-
+  <!-- BOOTSTRAP JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <!-- External JavaScript -->
   <script type="text/javascript" src="static/main.js"></script>
-
 </html>
 
 
